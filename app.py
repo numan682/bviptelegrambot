@@ -36,8 +36,9 @@ def getPrice(msg):
         markup = types.InlineKeyboardMarkup()
         markup.add(
             types.InlineKeyboardButton(text='🔁 Refresh', callback_data='refresh '+symbol_)
+            types.InlineKeyboardButton(text='Buy Now', callback_data='refresh '+symbol_)
         )
-        text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%*'
+        text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%*\n Announcement Demo Message Here'
 
         bot.send_message(
             msg.chat.id,
