@@ -14,7 +14,7 @@ client = Client()
 def startPrivate(msg : types.Message):
     bot.send_message(
         msg.chat.id,
-        '<b>😄 Welcome To Our Bot Crypto Price EXP Bot All Data Is From https://binance.com\n\nUsage : /p btc</b>'.format(msg.from_user.first_name),
+        '<b>😄 Welcome To Our Bot \\n\nUsage : /p btc</b>'.format(msg.from_user.first_name),
         parse_mode='html',
         reply_to_message_id=msg.id,
         disable_web_page_preview=True
