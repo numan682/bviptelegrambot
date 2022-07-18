@@ -1,0 +1,4 @@
+python-binance
+pyTelegramBotAPI
+Flask
+Gunicorn
