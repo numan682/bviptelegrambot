@@ -36,9 +36,17 @@ def getPrice(msg):
         markup = types.InlineKeyboardMarkup()
         markup.add(
             types.InlineKeyboardButton(text='SIGN UP', url='https://www.bibvip.net/register?inviteCode=0Mwsw9')
-        )markup.add(
-            types.KeyboardButton(text='SIGN UP', url='https://www.bibvip.net/register?inviteCode=0Mwsw9')
         )
+        markup.add(
+            types.InlineKeyboardButton(text='Futures', url='https://www.bibvip.com/en_US/futures')
+        )
+        markup.add(
+            types.InlineKeyboardButton(text='BIB CHAT', url='https://t.me/BIB_Global')
+        )
+        markup.add(
+            types.InlineKeyboardButton(text='BIB META', url='https://t.me/bibmetachannel')
+        )
+        
         text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%*'
 
         bot.send_message(
