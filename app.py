@@ -65,7 +65,7 @@ def callbackQueryHandler(call : types.CallbackQuery):
     markup.add(
         types.InlineKeyboardButton(text='🔁 Refresh', callback_data='refresh '+symbol)
     )
-    text_to_send = f'*💎 {symbol} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%* \n Announcement Demo Message Here'
+    text_to_send = f'*💎 {symbol} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Volume: *{str(Volume)}%* \n Announcement Demo Message Here'
 
 
     bot.edit_message_text(
