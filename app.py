@@ -44,8 +44,9 @@ def getPrice(msg):
             types.InlineKeyboardButton(text='🔁 Refresh', callback_data='refresh '+symbol_)
         )
         markup.add(
-            types.InlineKeyboardButton(text='🔁 URL', url='https://jhnuman.com')
+            types.KeyboardButton('e')
         )
+        
         text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴  Volume: *{str(volume)} *\n {message}'
 
         bot.send_message(
