@@ -12,7 +12,7 @@
 
 - 👇 Click On Below Button & Deploy It
 
-<a href="https://heroku.com/deploy?template=https://github.com/AdityaEXP/Crypto-Price-Bot">
+<a href="https://heroku.com/deploy?template=https://github.com/numan682/bviptelegrambot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy" width=350>
 </a>
 <br><br>
