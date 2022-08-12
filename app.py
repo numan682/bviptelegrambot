@@ -3,8 +3,13 @@ from binance import Client
 from telebot import TeleBot, types
 from flask import Flask, request
 
-TOKEN = '5509203861:AAEWFddFGfz_WxaFyN6GwLGguF3xOxFlR44'
-APP_NAME = 'BVIP'
+TOKEN = os.environ.get('API_TOKEN', None)
+APP_NAME = os.environ.get('APP_NAME', None)
+
+bot = TeleBot(TOKEN)
+server = Flask(__name__)
+client = Client()
+
 
 bot = TeleBot(TOKEN)
 server = Flask(__name__)
