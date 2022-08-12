@@ -32,6 +32,7 @@ def getPrice(msg):
         current_price = result['lastPrice']
         price_change = result['priceChange']
         price_change_percentage = result['priceChangePercent']
+        volume = result['volume']
 
         markup = types.InlineKeyboardMarkup()
         markup.add(
@@ -40,7 +41,7 @@ def getPrice(msg):
         markup.add(
             types.InlineKeyboardButton(text='🔁 Refresh', url='https://jhnuman.com')
         )
-        text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%*\n Announcement Demo Message Here'
+        text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴  Volume: *{str(volume)} *\n Announcement Demo Message Here'
 
         bot.send_message(
             msg.chat.id,
