@@ -3,7 +3,9 @@ from binance import Client
 from telebot import TeleBot, types
 from flask import Flask, request
 import urllib.request, json 
-
+with urllib.request.urlopen("https://raw.githubusercontent.com/numan682/bviptelegrambot/main/message.json") as url:
+    data = json.loads(url.read().decode())
+    message = data['message']
 
 TOKEN = os.environ.get('API_TOKEN', None)
 APP_NAME = os.environ.get('APP_NAME', None)
@@ -29,9 +31,6 @@ def getPrice(msg):
         bot.send_message(msg.chat.id, '*Example : /p BTC*', parse_mode='markdown')
         return
     try:
-        with urllib.request.urlopen("https://raw.githubusercontent.com/numan682/bviptelegrambot/main/message.json") as url:
-            data = json.loads(url.read().decode())
-            message = data['message']
         symbol_ = symbol[1].upper()
         result = client.get_ticker(symbol = f'{symbol_}USDT')
         current_price = result['lastPrice']
@@ -44,9 +43,8 @@ def getPrice(msg):
             types.InlineKeyboardButton(text='🔁 Refresh', callback_data='refresh '+symbol_)
         )
         markup.add(
-            types.KeyboardButton('e')
+            types.InlineKeyboardButton(text='🔁 URL', url='https://jhnuman.com')
         )
-        
         text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴  Volume: *{str(volume)} *\n {message}'
 
         bot.send_message(
