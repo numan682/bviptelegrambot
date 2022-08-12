@@ -36,6 +36,8 @@ def getPrice(msg):
         markup = types.InlineKeyboardMarkup()
         markup.add(
             types.InlineKeyboardButton(text='SIGN UP', url='https://www.bibvip.net/register?inviteCode=0Mwsw9')
+        )markup.add(
+            types.KeyboardButton(text='SIGN UP', url='https://www.bibvip.net/register?inviteCode=0Mwsw9')
         )
         text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change: *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%*'
 
