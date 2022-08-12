@@ -1,11 +1,10 @@
+from email import message
 import os
 from binance import Client
 from telebot import TeleBot, types
 from flask import Flask, request
 import urllib.request, json 
-with urllib.request.urlopen("https://raw.githubusercontent.com/numan682/bviptelegrambot/main/message.json") as url:
-    data = json.loads(url.read().decode())
-    message = data['message']
+message = "Hello"
 
 TOKEN = os.environ.get('API_TOKEN', None)
 APP_NAME = os.environ.get('APP_NAME', None)
