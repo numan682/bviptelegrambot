@@ -48,7 +48,7 @@ def getPrice(msg):
             types.InlineKeyboardButton(text='BIB META', url='https://t.me/bibmetachannel')
         )
         
-        text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change(24h): *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%* \n Volume : *{str(volume)}%*'
+        text_to_send = f'*💎 {symbol_} Price Today*\n\n➛ Price: *{str(current_price)}$*\n📉 Price Change(24h): *{str(price_change)}$*\n🔴 Change Percent: *{str(price_change_percentage)}%* \n Volume : *{str(volume)}*'
 
         bot.send_message(
             msg.chat.id,
